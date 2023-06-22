@@ -13,8 +13,10 @@ public abstract class ArrayMultiple {
      * @throws MyArraySizeException
      */
     void size(String[][] array) throws MyArraySizeException{
-      if(array.length!=4 && array[0].length!=4){
-          throw new MyArraySizeException("Массив не является размером 4x4!",array);
+        int rows = array.length;
+        int columns = array[0].length;
+      if(rows!=4 && columns!=4){
+          throw new MyArraySizeException("Массив не является размером 4x4!",array,rows,columns);
       }
       else this.array = array;
     };
