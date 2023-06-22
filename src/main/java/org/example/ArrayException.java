@@ -11,6 +11,14 @@ public abstract class ArrayException extends Exception {
         return array;
     }
 
+    public int getRows() {
+        return rows;
+    }
+
+    public int getColumns() {
+        return columns;
+    }
+
     public ArrayException(String message, String[][] array, int rows, int columns) {
         super(message);
         this.array = array;
